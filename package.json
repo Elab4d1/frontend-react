@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
+    "@mantine/core": "^6.0.11",
+    "@mantine/hooks": "^6.0.11",
     "@radix-ui/react-popover": "^1.0.6",
     "@radix-ui/react-slot": "^1.0.2",
     "autoprefixer": "10.4.14",
@@ -19,11 +22,14 @@
     "date-fns": "^2.30.0",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "iso-country-codes": "^0.0.5",
+    "mantine-flagpack": "^2.0.0",
     "next": "13.4.4",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-day-picker": "^8.7.1",
     "react-dom": "18.2.0",
+    "react-flagpack": "^1.2.0",
     "tailwind-merge": "^1.12.0",
     "tailwindcss": "3.3.2"
   },

@@ -8,7 +8,7 @@ import {
 
 export default function Header() {
   return (
-    <div className="align-center flex justify-between">
+    <div className="align-center mb-6 flex justify-between">
       <p>Viewing 1-10 of 175 reviews</p>
       <div className="flex items-center gap-2">
         <button className="flex gap-2 rounded-md border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-200 ">

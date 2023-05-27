@@ -15,15 +15,7 @@ const products = [...new Set(reviews.map((review) => review.appID))].map(
   })
 );
 
-const colors = [
-  "bg-red-600",
-  "bg-yellow-600",
-  "bg-green-600",
-  "bg-blue-600",
-  "bg-indigo-600",
-];
-
-export default function SelectProduct() {
+export default function SelectProduct({ colors }) {
   const [selected, setSelected] = useState(products[0]);
 
   return (
@@ -37,7 +29,6 @@ export default function SelectProduct() {
             <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
               <span className="flex items-center">
                 <span
-                  aria-label={selected.online ? "Online" : "Offline"}
                   className={cn(
                     colors[selected.id % colors.length],
                     "inline-block h-4 w-4 flex-shrink-0 rounded-sm"
