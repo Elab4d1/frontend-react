@@ -1,7 +1,14 @@
 import FilterBar from "@/components/FilterBar";
+import Header from "@/components/Header";
 import Select from "@/components/Select";
 import SelectProduct from "@/components/SelectProduct";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import {
+  ArrowDownTrayIcon,
+  BellIcon,
+  ChevronDownIcon,
+  CodeBracketIcon,
+  RssIcon,
+} from "@heroicons/react/20/solid";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,11 +26,11 @@ const sortings = [
 export default function Home() {
   return (
     <div className={`flex min-h-screen flex-col p-24 ${inter.className}`}>
-      <div className="flex justify-between p-12 border-b border-gray-200">
-        <div className="flex-grow max-w-lg">
+      <div className="flex justify-between border-b border-gray-200 p-12">
+        <div className="max-w-lg flex-grow">
           <SelectProduct Icon={ChevronDownIcon} />
         </div>
-        <div className="flex justify-center flex-grow max-w-lg gap-5">
+        <div className="flex max-w-lg flex-grow justify-center gap-5">
           <div>
             <Select data={sortings} />
           </div>
@@ -34,10 +41,10 @@ export default function Home() {
       </div>
       <div>
         <FilterBar />
-        <div className="flex flex-1 flex-col pl-64">
+        <div className="flex flex-1 flex-col pl-80">
           <main className="flex-1">
-            <div className="py-6 mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-              <p>content</p>
+            <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 md:px-8">
+              <Header />
             </div>
           </main>
         </div>

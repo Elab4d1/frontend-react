@@ -1,12 +1,13 @@
-import React from "react";
+import { DatePickerWithRange } from "./DatePickerWithRange";
 import Search from "./Search";
 
 export default function FilterBar() {
   return (
-    <div className="fixed bottom-0 top-64 w-64">
-      <div className="border-r border-gray-200 h-full">
-        <div className="overflow-y-auto p-4">
+    <div className="fixed bottom-0 top-64 w-80">
+      <div className="relative h-full border-r border-gray-200">
+        <div className="overflow-y-auto ">
           <Search />
+          <DatePickerWithRange />
         </div>
       </div>
     </div>
