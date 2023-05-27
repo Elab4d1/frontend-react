@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import SelectProduct from "@/components/SelectProduct";
+import FilterBar from "@/components/FilterBar";
 import Select from "@/components/Select";
-import SideBar from "@/components/SideBar";
+import SelectProduct from "@/components/SelectProduct";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ const sortings = [
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col p-24 ${inter.className}`}>
+    <div className={`flex min-h-screen flex-col p-24 ${inter.className}`}>
       <div className="flex justify-between p-12 border-b border-gray-200">
         <div className="flex-grow max-w-lg">
           <SelectProduct Icon={ChevronDownIcon} />
@@ -33,8 +33,15 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <SideBar />
+        <FilterBar />
+        <div className="flex flex-1 flex-col pl-64">
+          <main className="flex-1">
+            <div className="py-6 mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+              <p>content</p>
+            </div>
+          </main>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }
